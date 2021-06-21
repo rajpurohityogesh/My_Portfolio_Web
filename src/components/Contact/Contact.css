@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto+Slab&family=Signika+Negative:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.outer-grid {
+    display: grid;
+    grid-template-columns: 8% 92%;
+}
+
+.contactMe{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin: 3em auto 0;
+    align-items: center;
+    column-gap: 2em;
+}
+
+.contactMe .avatar{
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    transform: translateX(-10em);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.contactMe .avatarAppear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contactMe .contactMeContent{
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    justify-self: flex-start;
+    transform: translateX(10em);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.contactMe .contactMeContentAppear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contactMe .contactMeContent h2{
+    font-size: 2.5em;
+    color: rgb(88, 19, 126);
+    margin-bottom: 0.1em;
+}
+
+.contactMe .contactMeContent p{
+    font-size: 1.4em;
+    font-weight: 900;
+    color: rgb(155, 24, 231);
+}
+
+.contactMe .contactMeContent .button, .emailMeContent .button {
+    font-size: 1.2em;
+    font-weight: bolder;
+    border: 3px solid rgb(88, 19, 126);
+    background-color: rgb(88, 19, 126);
+    width: fit-content;
+    margin: 2em auto 0;
+    padding: 1em 2em;
+    border-radius: 2em;
+    color: white;
+    transition: all 0.3s;
+}
+
+.contactMe .contactMeContent .button:hover, .emailMeContent .button:hover{
+    background-color: white;
+    color: rgb(88, 19, 126);
+    cursor: pointer;
+}
+
+.emailMe {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 6em auto -1px;
+    justify-content: center;
+}
+
+.emailMe .emailSVG{
+    height: 50%;
+    width: 50%;
+    justify-self: flex-start;
+    transform: translateX(10em);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.emailMe .emailSVGAppear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.emailMe .emailMeContent{
+    justify-self: flex-end;
+    transform: translateX(-10em);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.emailMe .emailMeContentAppear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.emailMeContent h2 {
+    font-size: 2.5em;
+    color: rgb(88, 19, 126);
+    margin-bottom: 0.1em;
+}
+
+.emailMeContent h5{
+    font-size: 1.1em;
+    font-weight: 900;
+    color: rgb(155, 24, 231);
+}
+
+
+
+
+
+
+@media screen and (max-width: 770px){
+    .contactMe{
+        grid-template-columns: 1fr;
+    }
+    .contactMe .avatar{
+        justify-self: center;
+        height: fit-content;
+        width: 50%;
+        margin-bottom: 2em;
+    }
+    .contactMe .contactMeContent{
+        justify-self: center;
+        width: 80%;
+    }
+    .emailMe{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .emailMe .emailMeContent{
+        justify-self: center;
+    }
+    .emailMe .emailSVG {
+        justify-self: center;
+        height: 100%;
+        width: 70%;
+        margin-top: 2em;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .outer-grid{
+        grid-template-columns: 100%;
+    }
+    .emailMe .emailSVG {
+        width: 90%;
+    }
+}
+
+
+
+
+
+/* 
+form{
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 3em auto 3em;
+    column-gap: 2em;
+    row-gap: 2em;
+    background-color: rgb(30, 0, 46);
+    padding: 2em;
+    border-radius: 1em;
+}
+
+form .field{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.field label{
+    font-size: 1.2em;
+    text-align: left;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    color: white;
+}
+
+.field input, .field textarea{
+    padding: 0.5em;
+    font-size: 1.1em;
+    border-radius: 0.2em;
+    border: 2px solid rgb(30, 0, 46);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: rgb(30, 0, 46)
+}
+
+.field input:focus, .field textarea:focus{
+    outline: none;
+    border: 2px solid white;
+    color: rgb(30, 0, 46);
+}
+
+form .messageField {
+    grid-column: 1/3;
+}
+
+form .submitButton {
+    grid-column: 1/3;
+}
+
+form .submitButton button{
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: 2px solid rgb(155, 24, 231);
+    border-radius: 2em;
+    color: white;
+    background-color: rgb(30, 0, 46);
+    transition: all 0.3s;
+}
+
+form .submitButton button:hover{
+    background-color: rgb(155, 24, 231);
+    color: white;
+} */

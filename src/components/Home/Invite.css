@@ -1,0 +1,76 @@
+.inviteContainer h3,.inviteContainer h4 {
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.inviteContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(30, 0, 46);    
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    bottom: -4em;
+    padding: 4em 2em 0;
+    opacity: 0;
+    border-radius: 1em;
+    transition: all 1s;
+}
+
+.inviteContainer .first h3{
+    font-weight: 900;
+}
+
+.inviteContainer .second {
+    width: 50%;
+}
+
+.inviteContainer .second h4{
+    font-weight: lighter;
+}
+
+.inviteContainer .inviteButton{
+    border: 2px solid rgb(155, 24, 231);
+    border-radius: 2.2em;
+    padding: 1em 1.5em;
+    transition: all 0.3s;
+}
+
+.inviteButton a {
+    text-decoration: none;
+}
+
+.inviteContainer .inviteButton:hover {
+    background-color: rgb(155, 24, 231);
+}
+
+.inviteAppear {
+    padding: 2em;
+    opacity: 1;
+}
+
+
+
+
+@media screen and (max-width: 770px) {
+    .inviteContainer {
+        flex-direction: column;
+        height: 15em;
+        justify-content: space-around;
+        bottom: -7em;
+        margin: 0 12%;
+    }
+
+    .inviteContainer .second {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .inviteContainer{
+        margin: 0 auto;
+    }
+}

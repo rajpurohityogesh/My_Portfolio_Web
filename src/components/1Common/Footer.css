@@ -1,0 +1,101 @@
+.mainFooter {
+    background-color: #9b18e7;
+    margin: 0 0 0 2em;
+    padding: 2em 0 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.quote{
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    font-weight: lighter;
+    color: rgb(192, 192, 192);
+}
+
+.socialMedia {
+    display: flex;
+    width: 23%;
+    justify-content: space-around;
+    margin: 2em auto;
+    font-size: 1em;
+}
+
+.socialMedia div {
+    padding: 8px 4px 2px;
+    border: 2px solid rgb(192, 192, 192);
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.socialMedia div:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid white;
+}
+
+.socialMedia div:hover .mediaIcons{
+    color: rgb(155, 24, 231);
+}
+
+.socialMedia a {
+    text-decoration: none;
+}
+
+.socialMedia .mediaIcons {
+    color: white;
+}
+
+.copyRight{
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    color: rgb(192, 192, 192);
+}
+
+
+
+
+::-webkit-scrollbar{
+    width: 0.6em;
+    background-color: rgb(230, 230, 230);
+    border-radius: 0.5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(210, 210, 210);
+    border-radius: 0.5em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+
+
+@media screen and (max-width: 770px) {
+    .socialMedia {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mainFooter {
+        margin: 0;
+        padding: 10em 0 2em;
+    }
+    
+    .quote {
+        width: 90%;
+    }
+    
+    .socialMedia {
+        width: 50%;
+    }
+
+    .copyRight{
+        margin-bottom: 2em;
+    }
+}

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto+Slab&family=Signika+Negative:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.outer-grid {
+    display: grid;
+    grid-template-columns: 8% 92%;
+}
+
+.front-page {
+    text-align: left;
+    padding: 5em 0em 5em 10%;
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 50% 40%;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.front-page-content{
+    transform: translateX(-10em);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.contentAppear{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.namaste {
+    font-size: 4em;
+    color: rgb(30, 0, 46);
+}
+
+.myself h2, .myself h1 {
+    display: inline;
+    color: rgb(30, 0, 46);
+}
+
+.front-page .avatar{
+    opacity: 0;
+    transform: translateX(10em);
+    transition: all 1s;
+}
+
+.front-page .avatarAppear{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.typing{
+    display: inline-flex;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding: 0 0 4em 0;
+    transform: translateY(4em);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.typingAppear{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.typing .staticTxt{
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(30, 0, 46);
+}
+
+.dynamicTxt{
+    margin-left: 15px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+.dynamicTxt li{
+    list-style: none;
+    color: rgb(155, 24, 231);
+    font-size: 2em;
+    font-weight: bolder;
+    margin-right: 1em;
+    text-align: left;
+    position: relative;
+    top: 0;
+    animation: slide 13.2s steps(3) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -120px;
+    }
+}
+
+.dynamicTxt li span {
+    position: relative;
+}
+
+.dynamicTxt li span::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 3px none rgb(30, 0, 46);
+    animation: animeTyping 4.4s steps(21) infinite, blinking 0.4s infinite;;
+}
+
+@keyframes animeTyping{
+    40%{
+        left: 92%;
+        margin: 0 -1em 0 1em;
+    }
+    70%{
+        left: 92%;
+        margin: 0 -1em 0 1em;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes blinking {
+    100%{
+        border-left: 3px solid rgb(30, 0, 46);
+    }
+}
+
+.typing .altText{
+    display: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 770px){
+    .typing .altText{
+        display: inline;
+        color: rgb(155, 24, 231);
+        font-size: 2em;
+        font-weight: bolder;
+        text-align: left;
+        margin-left: 0.3em;
+    }
+    .dynamicTxt{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .front-page{
+        padding: 1em 0em 2em 10%;
+        text-align: center;
+        grid-template-columns: 100%;
+        justify-items: center;
+        align-items: flex-start;
+    }
+    .front-page img {
+        margin-top: 2em;
+    }
+    .typing{
+        padding-bottom: 2em;
+    }
+} 
+
+@media screen and (max-width: 480px) {
+    .outer-grid {
+        grid-template-columns: 100%;
+    }
+
+    .front-page{
+        padding: 0em 1em 0em;
+    }
+
+    .typing{
+        margin-top: 2em;
+        transform: translateY(3em);
+    }
+
+    .typingAppear{
+        transform: translateY(0);
+    }
+
+    .typing .staticTxt , .typing .altText{
+        font-size: 1.3em;
+    }
+}

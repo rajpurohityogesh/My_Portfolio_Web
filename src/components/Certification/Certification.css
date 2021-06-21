@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto+Slab&family=Signika+Negative:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.outer-grid {
+    display: grid;
+    grid-template-columns: 8% 92%;
+}
+
+
+
+.certiNavbar{
+    display: flex;
+    column-gap: 3em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7em;
+    width: fit-content;
+    margin: 2em auto 2em;
+    color: rgb(155, 24, 231);
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.certiNavbar .clicked{
+    color: rgb(95, 1, 146);
+    font-size: 1.1em;
+}
+
+.certiNavbarItem:hover{
+    cursor: pointer;
+    color: rgb(95, 1, 146);
+}
+
+
+
+
+.certificateContainer{
+    padding: 4em 3em 3em;
+    margin: 0em 1em 2em 2em;
+    border-radius: 1em;
+    background-color: rgb(155, 24, 231);
+}
+
+.certificateData{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 2em;
+    column-gap: 2em;
+    justify-items: center;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+    .certificateData{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .certificateContainer{
+        padding: 4em 1em 3em;
+    }
+    .certificateData{
+        grid-template-columns: 1fr;
+    }
+    .certiNavbar{
+        font-size: 0.6em;
+    }
+    .certiNavbar .clicked{
+        color: rgb(95, 1, 146);
+        font-size: 1.1em;
+    }
+    .certiNavbarItem:hover{
+        cursor: pointer;
+        color: rgb(95, 1, 146);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .outer-grid{
+        grid-template-columns: 100%;
+    }
+    .certificateContainer {
+        margin: 0em 1em 2em 1em;
+    }
+    .certiNavbar{
+        font-size: 0.5em;
+    }
+    .certiNavbar .clicked{
+        color: rgb(95, 1, 146);
+        font-size: 1.1em;
+    }
+    .certiNavbarItem:hover{
+        cursor: pointer;
+        color: rgb(95, 1, 146);
+    }
+}
+

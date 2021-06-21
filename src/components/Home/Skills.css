@@ -1,0 +1,135 @@
+.skills{
+    margin: 10em 8% 0em;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.skillApper{
+    margin: 5em 8%;
+    opacity: 1;
+}
+
+.skills .skillTops {
+    margin:3em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skills .heading{
+    font-size: 3em;
+    color: rgb(30, 0, 46);
+}
+
+.skills .subHeading{
+    font-weight: 600;
+    color: rgb(155, 24, 231);
+}
+
+
+
+.skillDataContainer{
+    font-family: 'Montserrat', sans-serif;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.skillDataItem{
+    display: flex;
+    column-gap: 1.3em;
+    margin: 1em 0;
+    align-items: center;
+}
+
+.skillDataItem img {
+    color: rgb(155, 24, 231);
+    height: 3em;
+    width: 3em;
+}
+
+.skillDataItem .skillPercentage{
+    height: 15px;
+    width: 90%;
+    background-color: rgba(155, 24, 231,0.2);
+    border-radius: 0.6em;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px 1px rgb(192,192,192);
+}
+
+.skillDataItem .skillPercentage:hover{
+    box-shadow: 0 0 10px 3px rgb(192,192,192);
+}
+
+.skillDataItem .skillPercentage .inner {
+    height: 100%;
+    background-color: rgb(155, 24, 231);
+    border-radius: 0.6em;
+    width: 0%;
+    transition: all 1s;
+}
+
+.skillDataItem .skillPercentage .htmlSkill{
+    width: 70%;
+}
+
+.skillDataItem .skillPercentage .cssSkill{
+    width: 60%;
+}
+
+.skillDataItem .skillPercentage .jsSkill{
+    width: 75%;
+}
+
+.skillDataItem .skillPercentage .reactSkill{
+    width: 70%;
+}
+
+.skillDataItem .skillPercentage .nodeSkill{
+    width: 65%;
+}
+
+.skillDataItem .skillPercentage .mongoSkill{
+    width: 60%;
+}
+
+.skillDataItem .skillPercentage .herokuSkill{
+    width: 50%;
+}
+
+
+.skillDataItem span {
+    font-weight: 700;
+    color: rgb(155, 24, 231);
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.skillDataItem:hover span {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+@media screen and (max-width: 1100px){
+    .skillDataContainer{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 770px){
+    .skillDataContainer{
+        width: 90%;
+    }
+    .skillDataItem span {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .skillDataContainer{
+        width: 100%;
+    }
+}
